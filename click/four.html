@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <img id="image" src="img/sp1.jpg" width="400px" height="400px">
+    <div>
+        <img id="image1" src="img/sp1.jpg" width="100px" height="100px">
+        <img id="image2" src="img/sp2.jpg" width="100px" height="100px">
+        <img id="image3" src="img/sp3.jpg" width="100px" height="100px">
+        <img id="image4" src="img/sp4.jpg" width="100px" height="100px">
+    </div>
+</body>
+<script>
+    var img = document.getElementById("image");
+    var img1 = document.getElementById("image1");
+    var img2 = document.getElementById("image2");
+    var img3 = document.getElementById("image3");
+    var img4 = document.getElementById("image4");
+
+    img1.addEventListener("click", function () {
+        img.src = img1.src;
+    })
+    img2.addEventListener("click", function () {
+        img.src = img2.src;
+    })
+    img3.addEventListener("click", function () {
+        img.src = img3.src;
+    })
+    img4.addEventListener("click", function () {
+        img.src = img4.src;
+    })
+
+</script>
+
+</html>
