@@ -16,16 +16,21 @@
             margin: 15px;
             width: 20%;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
+
 <body class="ancestors">
     <div>
         <ul> Parent
-            <li> child 1  <span>grandchild1</span>
+            <li> child 1 <span class="hidden">grandchild1</span>
             </li>
-            <li> child 2 <span>grandchild2</span>
+            <li> child 2 <span class="hidden">grandchild2</span>
             </li>
-            <li> child 3 <span>grandchild3</span>
+            <li> child 3 <span class="hidden">grandchild3</span>
             </li>
         </ul>
     </div>
@@ -34,6 +39,7 @@
     var list = document.getElementsByTagName("li");
 
     for (var i = 0; i < list.length; i++) {
+
         list[i].addEventListener("click", function () {
             var span = this.querySelector("span");
             if (span.style.display === "block") {
