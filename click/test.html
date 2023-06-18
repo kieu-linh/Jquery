@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .ancestors {
+            display: block;
+            border: 2px solid gray;
+            color: black;
+            padding: 5px;
+            margin: 15px;
+            width: 20%;
+        }
+    </style>
+</head>
+<body class="ancestors">
+    <div>
+        <ul> Parent
+            <li> child 1  <span>grandchild1</span>
+            </li>
+            <li> child 2 <span>grandchild2</span>
+            </li>
+            <li> child 3 <span>grandchild3</span>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var list = document.getElementsByTagName("li");
+
+    for (var i = 0; i < list.length; i++) {
+        list[i].addEventListener("click", function () {
+            var span = this.querySelector("span");
+            if (span.style.display === "block") {
+                span.style.display = "none";
+            } else {
+                span.style.display = "block";
+
+                var allSpan = document.getElementsByTagName("span");
+                for (var j = 0; j < allSpan.length; j++) {
+                    if (allSpan[j] !== span) {
+                        allSpan[j].style.display = "none";
+                    }
+                }
+            }
+        });
+    }
+
+</script>
+
+</html>
